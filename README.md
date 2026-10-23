@@ -4,6 +4,8 @@ Diamond Rush (Gameloft, 2006) running in the browser, in readable JavaScript.
 
 Open `index.html` to play (no server needed).
 
+There is also a native desktop version for **Windows and Linux** in readable C++: see [`cpp/`](cpp/).
+
 ## Not an emulator
 
 This is **not an emulator** and it does **not** run the original `.jar`. There is no Java virtual machine and no J2ME emulation.

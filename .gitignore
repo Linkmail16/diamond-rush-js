@@ -1,2 +1,5 @@
 Thumbs.db
 .DS_Store
+cpp/build/
+cpp/build-win/
+cpp/third_party/SDL2-mingw/
