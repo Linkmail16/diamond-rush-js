@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Diamond Rush</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1l6 5-6 9-6-9z' fill='%23d22'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+	<section id="stage">
+		<div id="bar">
+			<button id="smooth" title="Draws at the monitor refresh rate without changing the game speed (G)">Smooth: on</button>
+			<button id="rate" title="Game frame rate limit (L)">Limit: 20 FPS</button>
+			<span id="fpsnow">0 FPS</span>
+		</div>
+		<div id="phone">
+			<canvas id="screen" width="240" height="320"></canvas>
+			<div id="start">
+				<h1>Diamond Rush</h1>
+				<button id="play" disabled>Loading…</button>
+				<p id="msg"></p>
+			</div>
+		</div>
+		<div id="softkeys">
+			<button class="soft" data-key="-6" aria-label="Left soft key">✔ Left key <kbd>Q</kbd></button>
+			<button class="soft" data-key="-7" aria-label="Right soft key"><kbd>Esc</kbd> Right key ↩</button>
+		</div>
+		<div id="pad" aria-hidden="true">
+			<div class="dpad">
+				<button data-key="-1" class="up">▲</button>
+				<button data-key="-3" class="left">◀</button>
+				<button data-key="-5" class="mid">5</button>
+				<button data-key="-4" class="right">▶</button>
+				<button data-key="-2" class="down">▼</button>
+			</div>
+			<div class="extra">
+				<button data-key="42">*</button>
+				<button data-key="53">E</button>
+			</div>
+		</div>
+	</section>
+	<aside id="help">
+		<h2>Controls</h2>
+		<dl>
+			<dt>Arrows · WASD</dt><dd>Move</dd>
+			<dt>Space · Enter</dt><dd>Action (5)</dd>
+			<dt>E</dt><dd>Key 5</dd>
+			<dt>R</dt><dd>Star (*)</dd>
+			<dt>Q</dt><dd>Left soft key (✔)</dd>
+			<dt>Esc · P</dt><dd>Right soft key (menu / pause)</dd>
+			<dt>0 – 9</dt><dd>Phone keypad</dd>
+			<dt>M</dt><dd>Mute</dd>
+			<dt>F</dt><dd>Fullscreen</dd>
+			<dt>G</dt><dd>Smooth motion</dd>
+			<dt>L</dt><dd>FPS limit (without smooth)</dd>
+		</dl>
+		<p class="note">Your progress is saved in this browser.</p>
+		<p class="note">The original game runs at 20 FPS and counts frames: with more FPS everything runs faster. "Smooth" keeps the game at its own speed and draws at your monitor's FPS.</p>
+	</aside>
+</main>
+<script src="res.js"></script>
+<script src="snd.js"></script>
+<script src="rt.js"></script>
+<script src="src/Midlet.js"></script>
+<script src="src/SpritePack.js"></script>
+<script src="src/FallingRocks.js"></script>
+<script src="src/Cutscene.js"></script>
+<script src="src/Rnd.js"></script>
+<script src="src/MoreGames.js"></script>
+<script src="src/Tables.js"></script>
+<script src="src/Actor.js"></script>
+<script src="src/Game.js"></script>
+<script src="src/_index.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
